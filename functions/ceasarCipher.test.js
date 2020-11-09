@@ -27,3 +27,11 @@ test('throws an error with non string input as argument 1', () => {
 test('throws an error with non number input as argument 2', () => {
   expect(() => ceasarCipher('test', '2')).toThrow('Expected number as argument 2');
 });
+
+test('works with negative key', () => {
+  expect(ceasarCipher('efgfoe uif fbtu xbmm pg uif dbtumf', -1)).toBe('defend the east wall of the castle');
+});
+
+test('works with big negative key', () => {
+  expect(ceasarCipher('efgfoe uif fbtu xbmm pg uif dbtumf', -859)).toBe('defend the east wall of the castle');
+});
