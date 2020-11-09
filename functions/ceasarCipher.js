@@ -1,10 +1,17 @@
 const ceasarCipher = (str, key) => {
+  if (typeof str !== 'string') {
+    throw new Error('Expected string as argument 1');
+  }
+  if (typeof key !== 'number') {
+    throw new Error('Expected number as argument 2');
+  }
+
   const alphabet = 'abcdefghijklmnopqrstuvwxyz';
 
-  const cipher = ((key) => {
+  const cipher = (() => {
     const slicePoint = key % alphabet.length;
     return alphabet.slice(slicePoint) + alphabet.slice(0, slicePoint);
-  })(key);
+  })();
 
   return str.split('').map((s) => {
     if (alphabet.includes(s.toLowerCase())) {

@@ -19,3 +19,11 @@ test('works with high key numbers', () => {
 test('works with uppercase', () => {
   expect(ceasarCipher('Defend the east Wall of the castle', 1)).toBe('Efgfoe uif fbtu Xbmm pg uif dbtumf');
 });
+
+test('throws an error with non string input as argument 1', () => {
+  expect(() => ceasarCipher(2, 2)).toThrow('Expected string as argument 1');
+});
+
+test('throws an error with non number input as argument 2', () => {
+  expect(() => ceasarCipher('test', '2')).toThrow('Expected number as argument 2');
+});
