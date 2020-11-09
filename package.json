@@ -1,0 +1,26 @@
+{
+  "name": "testing-practice",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/EriBloo/testing-practice.git"
+  },
+  "author": "eriBloo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EriBloo/testing-practice/issues"
+  },
+  "homepage": "https://github.com/EriBloo/testing-practice#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "babel-jest": "^26.6.3",
+    "jest": "^26.6.3"
+  }
+}
